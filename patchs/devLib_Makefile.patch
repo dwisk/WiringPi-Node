@@ -5,10 +5,10 @@
  DESTDIR=/usr
  PREFIX=/local
 +PWD=`pwd`
- 
+
  STATIC=libwiringPiDev.a
  DYNAMIC=libwiringPiDev.so.$(VERSION)
-@@ -33,7 +34,7 @@
+@@ -35,7 +36,7 @@
  #DEBUG	= -g -O0
  DEBUG	= -O2
  CC	= gcc
@@ -16,4 +16,3 @@
 +INCLUDE	= -I. -I$(PWD)/../wiringPi
  DEFS	= -D_GNU_SOURCE
  CFLAGS	= $(DEBUG) -Wformat=2 -Wall $(INCLUDE) -Winline -pipe -fPIC
- 
